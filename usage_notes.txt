@@ -1,0 +1,13 @@
+//Servlet and spring notes
+
+Project Structure
+     		{project-name}-
+					  |- src
+					  |- web
+					  	 |- WEB-INF
+					  	 		|- web.xml
+
+
+Deploy the application and got to
+1) http://localhost:8080/smarttracker_war_exploded/ for index.jsp
+and got to http://localhost:8080/smarttracker_war_exploded/hello.htm for helo.htm

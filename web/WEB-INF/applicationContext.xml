@@ -3,9 +3,27 @@
   ~ Copyright by sumit yadav
   -->
 
-<beans xmlns="http://www.springframework.org/schema/beans"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:mvc="http://www.springframework.org/schema/mvc"
+  xmlns="http://www.springframework.org/schema/beans"
+  xsi:schemaLocation="http://www.springframework.org/schema/mvc
+	   					   http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	   					   http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd
+						   http://www.springframework.org/schema/context
+						   http://www.springframework.org/schema/context/spring-context.xsd">
 
-  <bean name="/hello.htm" class="springapp.web.HelloController" />
+  <mvc:annotation-driven />
+
+  <mvc:default-servlet-handler/>
+
+  <!--Activate Annotations -->
+  <context:annotation-config />
+
+  <!-- enable package scan -->
+  <context:component-scan base-package="springapp.web" />
+
+
+
 </beans>

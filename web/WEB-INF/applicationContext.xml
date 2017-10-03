@@ -16,10 +16,10 @@
 
   <mvc:annotation-driven />
 
-  <mvc:default-servlet-handler/>
+  <!--<mvc:default-servlet-handler/>-->
 
   <!--Activate Annotations -->
-  <context:annotation-config />
+  <!--<context:annotation-config/>-->
 
   <!-- enable package scan -->
   <context:component-scan base-package="springapp.web" />

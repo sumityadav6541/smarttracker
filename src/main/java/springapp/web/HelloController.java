@@ -11,22 +11,20 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by Sumit Yadav on 16/09/17.
  */
-@Controller
-@RequestMapping(produces = "application/json")
+@RestController
 public class HelloController {
 
   private final Log logger = LogFactory.getLog(getClass());
 
   @RequestMapping(value = "/api", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-  @ResponseBody
   public Map<String,String> handleRequest(HttpServletRequest httpServletRequest,
       HttpServletResponse httpServletResponse) throws Exception {
     logger.info("Returning Hello view !");
